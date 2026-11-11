@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "probability.html#count-pairs-before-you-count-sums",
+    "href": "probability.html#count-pairs-before-you-count-sums",
+    "title": "Mathematical Field Notes",
+    "section": "Count pairs before you count sums",
+    "text": "Count pairs before you count sums\nPicture a red die and a blue die. A red 2 and a blue 5 is a different outcome from a red 5 and a blue 2. That gives 6×6=366\\times6=36 equally likely ordered pairs.\nThe pairs (1,6)(1,6), (2,5)(2,5), (3,4)(3,4), (4,3)(4,3), (5,2)(5,2), and (6,1)(6,1) all sum to seven. Only (1,1)(1,1) sums to two. So P(sum=7)=6/36=1/6P(\\text{sum}=7)=6/36=1/6, and P(sum=2)=1/36P(\\text{sum}=2)=1/36."
+  },
+  {
+    "objectID": "probability.html#try-the-experiment-in-r",
+    "href": "probability.html#try-the-experiment-in-r",
+    "title": "Mathematical Field Notes",
+    "section": "Try the experiment in R",
+    "text": "Try the experiment in R\nRun this code in RStudio or Positron. What fraction of the rolls add to seven? Compare it with 1/61/6.\nset.seed(1372)\nn &lt;- 10000\nred &lt;- sample.int(6, n, replace = TRUE)\nblue &lt;- sample.int(6, n, replace = TRUE)\nmean(red + blue == 7)\nEach comparison produces TRUE or FALSE. R counts those as 1 and 0 when it takes their mean, so the result is the fraction of successes. Change the seed and see how the estimate varies.\n\nTry it\nWhich total is more likely, six or eight? Find all the pairs for one total, then look for a shortcut for the other.\n\n\nShow the reasoning\n\nFive pairs make six, starting with (1,5)(1,5) and ending with (5,1)(5,1). Replace each face dd by 7−d7-d. This pairs every roll totaling six with exactly one roll totaling eight, so both probabilities are 5/365/36.\n\n\nCity Tech course information"
+  },
+  {
+    "objectID": "linear-algebra.html#follow-one-point",
+    "href": "linear-algebra.html#follow-one-point",
+    "title": "Mathematical Field Notes",
+    "section": "Follow one point",
+    "text": "Follow one point\nThe shear with parameter kk sends (x,y)(x,y) to (x+ky,y)(x+ky,y). The height stays fixed. A point at height yy moves horizontally by kyky.\nSet the slider to k=1k=1. The marked point starts at (0,1)(0,1) and lands at (1,1)(1,1). The fine curves show intermediate shears between zero and the selected value. The point (1,0)(1,0) stays put. Set k=−1k=-1 and watch which way the top of the circle moves."
+  },
+  {
+    "objectID": "linear-algebra.html#read-the-matrix-from-the-picture",
+    "href": "linear-algebra.html#read-the-matrix-from-the-picture",
+    "title": "Mathematical Field Notes",
+    "section": "Read the matrix from the picture",
+    "text": "Read the matrix from the picture\nWriting the images of the two standard basis vectors as columns gives the shear matrix.\nSk=[1k01],Sk[xy]=[x+kyy].\nS_k =\n\\begin{bmatrix}1 & k \\\\ 0 & 1\\end{bmatrix},\n\\qquad\nS_k \\begin{bmatrix}x\\\\y\\end{bmatrix}\n= \\begin{bmatrix}x+ky\\\\y\\end{bmatrix}.\n\nThe first column, (1,0)(1,0), stays the same for every kk. The second column, (k,1)(k,1), is the marked point in the figure."
+  },
+  {
+    "objectID": "linear-algebra.html#where-did-the-area-go",
+    "href": "linear-algebra.html#where-did-the-area-go",
+    "title": "Mathematical Field Notes",
+    "section": "Where did the area go?",
+    "text": "Where did the area go?\nTake a horizontal slice through the unit disk. Every point in that slice moves the same distance, so the slice keeps its width. Adding those widths over the same heights gives the same total area. The area factor also appears in the determinant, det⁡(Sk)=1⋅1−k⋅0=1\\det(S_k)=1\\cdot1-k\\cdot0=1.\n\nTry it\nSet k=−1k=-1. Where does (2,1)(2,1) land? Which single shear would take it back?\n\n\nShow the reasoning\n\nAt height 11, the point moves one unit left to (1,1)(1,1). Applying a shear with k=1k=1 moves it one unit right again. More generally, S−kS_{-k} undoes SkS_k because the two horizontal shifts cancel.\n\n\nCity Tech course information"
+  }
+]

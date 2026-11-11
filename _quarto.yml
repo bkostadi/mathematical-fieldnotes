@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - assets/
+    - .nojekyll
+
+website:
+  title: "Mathematical Field Notes"
+  description: "Visual lessons in linear algebra, probability, and statistics for students at City Tech."
+  favicon: assets/figures/fieldmark.png
+  search: false
+  navbar:
+    title: "Field Notes"
+    logo: assets/figures/fieldmark.png
+    logo-alt: "Field Notes home"
+    collapse: false
+    pinned: true
+    right:
+      - text: Courses
+        href: index.qmd#courses
+      - text: About
+        href: about.qmd
+  page-footer:
+    left: "Mathematical Field Notes"
+    right: "[Department of Mathematics · City Tech, CUNY](https://www.citytech.cuny.edu/mathematics/)"
+
+format:
+  html:
+    theme: default
+    css: assets/fieldnotes.css
+    page-layout: custom
+    toc: false
+    anchor-sections: false
+    html-math-method: mathml
+    smooth-scroll: false
+    link-external-icon: false
+
+lang: en

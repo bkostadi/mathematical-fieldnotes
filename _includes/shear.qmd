@@ -1,0 +1,24 @@
+```{=html}
+<figure class="shear-figure" data-shear-lab>
+  <figcaption class="figure-heading">
+    <span class="figure-title">A horizontal shear</span>
+    <span class="figure-formula" aria-label="x goes to x plus k times y, and y stays fixed">S<sub>k</sub>(x, y) = (x + ky, y)</span>
+  </figcaption>
+  <div class="shear-stage">
+    <img class="shear-fallback" src="assets/figures/shear.png" width="960" height="476" alt="The dashed unit circle and its tilted elliptical image under a horizontal shear of one. Both enclose the same area.">
+    <canvas class="shear-canvas" hidden role="img" aria-label="The unit circle and its image under a horizontal shear."></canvas>
+  </div>
+  <div class="figure-key" aria-hidden="true">
+    <span><i class="key-line before"></i>Unit circle</span>
+    <span><i class="key-line after"></i>Sheared circle</span>
+  </div>
+  <noscript><p class="static-shear-caption">The figure shows the shear at <i>k</i> = 1.</p></noscript>
+  <div class="shear-controls" hidden>
+    <label for="shear-value">Shear <i>k</i></label>
+    <input id="shear-value" type="range" min="-1.5" max="1.5" step="0.05" value="1" aria-describedby="shear-hint">
+    <output for="shear-value" aria-hidden="true">1.00</output>
+  </div>
+  <span id="shear-hint" class="visually-hidden">Use the arrow keys to adjust the shear. The marked point is the image of (0, 1).</span>
+</figure>
+<script src="assets/shear.js" defer></script>
+```

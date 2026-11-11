@@ -1,0 +1,28 @@
+---
+pagetitle: "About the notes"
+description: "The teaching approach behind these mathematics notes for City Tech students."
+---
+
+::::: {.reading-shell .about-shell role="main"}
+[← Courses](index.qmd#courses){.back-link}
+
+::: {.page-intro}
+[Mathematics · City Tech, CUNY]{.eyebrow}
+
+# About the notes
+
+I’m Bobby, and I teach mathematics at New York City College of Technology. I like to start with a question that a picture or a small experiment can help us answer.
+:::
+
+:::: {.lesson-prose}
+The linear algebra notes begin with a circle and a slider. Before writing down the matrix, try to predict what will happen to a point on the circle. The two columns of the matrix then have a job you can see.
+
+In probability, the question starts with two dice. Counting every possible roll gives an exact answer. Running the experiment in R shows what that answer looks like in a finite sample.
+
+::: {.about-links}
+[Explore linear algebra →](linear-algebra.qmd)
+
+[Explore probability →](probability.qmd)
+:::
+::::
+:::::

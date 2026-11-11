@@ -1,0 +1,58 @@
+---
+pagetitle: "Introduction to Linear Algebra"
+description: "A visual lesson on what a horizontal shear does to a circle, vectors, and area."
+---
+
+::::: {.reading-shell role="main"}
+[← Courses](index.qmd#courses){.back-link}
+
+::: {.page-intro}
+[MAT 2580 · Introduction to Linear Algebra]{.eyebrow}
+
+# What happens to a circle under a shear?
+
+Imagine sliding a deck of cards sideways. Each card keeps its width, while the ones higher in the deck move farther. A horizontal shear does the same thing to the plane.
+:::
+
+{{< include _includes/shear.qmd >}}
+
+:::: {.lesson-prose}
+## Follow one point
+
+The shear with parameter $k$ sends $(x,y)$ to $(x+ky,y)$. The height stays fixed. A point at height $y$ moves horizontally by $ky$.
+
+Set the slider to $k=1$. The marked point starts at $(0,1)$ and lands at $(1,1)$. The fine curves show intermediate shears between zero and the selected value. The point $(1,0)$ stays put. Set $k=-1$ and watch which way the top of the circle moves.
+
+## Read the matrix from the picture
+
+Writing the images of the two standard basis vectors as columns gives the shear matrix.
+
+$$
+S_k =
+\begin{bmatrix}1 & k \\ 0 & 1\end{bmatrix},
+\qquad
+S_k \begin{bmatrix}x\\y\end{bmatrix}
+= \begin{bmatrix}x+ky\\y\end{bmatrix}.
+$$
+
+The first column, $(1,0)$, stays the same for every $k$. The second column, $(k,1)$, is the marked point in the figure.
+
+## Where did the area go?
+
+Take a horizontal slice through the unit disk. Every point in that slice moves the same distance, so the slice keeps its width. Adding those widths over the same heights gives the same total area. The area factor also appears in the determinant, $\det(S_k)=1\cdot1-k\cdot0=1$.
+
+::: {.practice}
+### Try it
+
+Set $k=-1$. Where does $(2,1)$ land? Which single shear would take it back?
+
+<details><summary>Show the reasoning</summary>
+
+At height $1$, the point moves one unit left to $(1,1)$. Applying a shear with $k=1$ moves it one unit right again. More generally, $S_{-k}$ undoes $S_k$ because the two horizontal shifts cancel.
+
+</details>
+:::
+
+[City Tech course information](https://openlab.citytech.cuny.edu/mathematics-department/course-materials/mat-courses/mat-2580/){.source-link}
+::::
+:::::

@@ -1,0 +1,53 @@
+---
+pagetitle: "Mathematical Field Notes"
+description: "Explore two City Tech mathematics courses through visual lessons and experiments."
+---
+
+::::: {.home-shell role="main"}
+:::: {.home-hero}
+::: {.hero-copy}
+[City Tech · CUNY]{.eyebrow}
+
+<h1 class="hero-title">Mathematical<br><em>field notes</em></h1>
+
+::: {.hero-intro}
+Explore linear algebra and statistics through interactive figures, worked examples, and probability experiments you can run in R.
+:::
+
+[Browse courses <span aria-hidden="true">↓</span>](#courses){.primary-link}
+:::
+
+{{< include _includes/shear.qmd >}}
+
+::::
+
+<section id="courses" class="course-section" aria-labelledby="course-heading">
+<h2 id="course-heading">Courses</h2>
+
+:::: {.course-grid}
+::: {.course-tile}
+<img class="course-thumb" src="assets/figures/algebra-mark.png" width="104" height="104" alt="">
+
+::: {.tile-copy}
+[MAT 2580]{.course-code}
+
+### [Introduction to Linear Algebra](linear-algebra.qmd)
+
+Follow a circle through a shear and see how a matrix can change shape while preserving area.
+:::
+:::
+
+::: {.course-tile}
+<img class="course-thumb" src="assets/figures/probability-mark.png" width="104" height="104" alt="">
+
+::: {.tile-copy}
+[MAT 1372]{.course-code}
+
+### [Statistics with Probability](probability.qmd)
+
+Roll a pair of dice, count the ways to make a sum, and test your prediction with R.
+:::
+:::
+::::
+</section>
+:::::
